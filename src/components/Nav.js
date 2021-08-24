@@ -1,27 +1,48 @@
-import '../styles/component-styles/Nav.scss'
-import React from 'react';
+import React, { useState } from 'react';
+import '../styles/style.scss'
+import logo from '../images/logo.png'
+import * as FaIcons from 'react-icons/fa'
+import * as IoIcons from 'react-icons/io5'
+import { Link } from 'react-router-dom'
+import { NavItems } from './NavItems'
 
 function Nav() {
+    const [menubar, setMenubar] = useState(false)
+
+    const showMenubar = () => setMenubar(!menubar)
+
     return (
-        <div>
+        <>
             <header>
-                <div className="logo">
-                    x
-                </div>
+                <Link href="#" className="logo">
+                    <img src={logo} alt="Binger Logo" />
+                </Link>
 
-                <div className="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <Link className="hamburger">
+                    <FaIcons.FaBars onClick={showMenubar}/>
+                </Link>
 
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Favourites</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
+                <nav className={menubar ? 'nav active' : 'nav'}>
+                    <ul className="nav-ul">
+                        <li className="menu-toggle">
+                            <Link to='#' className='hamburger'>
+                                <IoIcons.IoClose />
+                            </Link>
+                            
+                        </li>
+                        {NavItems.map((item, index) => {
+                            return (
+                                <li key={index} className={item.class}>
+                                    <Link to={item.path}>
+                                        {item.icon} <span>{item.title}</span>
+                                    </Link>
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </nav>
             </header>
-        </div>
+        </>
     )
 }
 
