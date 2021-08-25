@@ -1,5 +1,65 @@
 header {
-    display: flex;
+    .navbar {
+        height: 6rem;
+        background: $background-color;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
+        .logo {
+            width: 4rem;
+        }
 
+        .hamburger {
+            color: $primary-color;
+            font-size: 2.5rem;
+        }
+
+        .navmenu {
+            background: $background-color;
+            width: 65vw;
+            max-width: 330px;
+            padding: 1rem;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            right: -100%;
+            transition: 700ms;
+
+            .nav-ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                a {
+                    text-decoration: none;
+                    color: $primary-color;
+                    font-size: 1.5rem;
+                    font-family: $siteFont;
+                    font-weight: 700;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+
+                    span {
+                        padding-left: 0.5rem;
+                    }
+                }
+                li {
+                    padding-bottom: 2rem;
+                }
+            }
+
+            a.close {
+                font-size: 3.5rem;
+                padding: 0;
+            }
+        }
+
+        .navmenu.active {
+            right: 0;
+            transition: 300ms;
+        }
+    }
 }
+

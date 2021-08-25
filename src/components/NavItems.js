@@ -4,7 +4,7 @@ import * as RiIcons from 'react-icons/ri'
 
 export const NavItems = [
     {
-        title: 'Browse Movies',
+        title: 'Movies',
         icon: <RiIcons.RiMovie2Line />,
         class: 'nav-item-li',
         path: '/',
@@ -19,6 +19,6 @@ export const NavItems = [
         title: 'About Us',
         icon: <RiIcons.RiInformationLine />,
         class: 'nav-item-li',
-        path: '/',
+        path: '/about',
     },
 ]
