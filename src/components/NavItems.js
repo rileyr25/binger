@@ -1,6 +1,7 @@
 import React from 'react'
 import * as FaIcons from 'react-icons/fa'
 import * as RiIcons from 'react-icons/ri'
+import * as GoIcons from 'react-icons/go'
 
 export const NavItems = [
     {
@@ -8,6 +9,12 @@ export const NavItems = [
         icon: <RiIcons.RiMovie2Line />,
         class: 'nav-item-li',
         path: '/',
+    },
+    {
+        title: 'Search',
+        icon: <GoIcons.GoSearch />,
+        class: 'nav-item-li',
+        path: '/search',
     },
     {
         title: 'Favourites',

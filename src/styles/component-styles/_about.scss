@@ -1,0 +1,28 @@
+.about-message {
+    text-align: center;
+    color: white;
+    font-family: $siteFont;
+    p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        padding: 0 1rem;
+    }
+    span {
+        color: $primary-color;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+}
+.tmdb {
+    padding: 2rem 1rem 0 1rem;
+    text-align: center;
+    img {
+        width: 60px;
+    }
+    p {
+        font-size: 0.9rem;
+        color: white;
+        font-family: $siteFont;
+        line-height: 1.5;
+    }
+}

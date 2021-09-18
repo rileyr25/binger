@@ -9,32 +9,35 @@ import { NavItems } from './NavItems'
 function Nav() {
     const [menubar, setMenubar] = useState(false)
 
-    const showMenubar = () => setMenubar(!menubar)
+    const toggleMenubar = () => setMenubar(!menubar)
+    const hideMenubar = () => setMenubar (false)
+
 
     return (
         <>
             <header>
                 <div className="navbar">
-                    <Link href="#" className="logo">
-                        <img src={logo} alt="Binger Logo" />
+                    <Link to='/' className="logo" onClick={hideMenubar}>
+                        <img src={logo} alt="Binger Logo"  />
+                        <p>Binger</p>
                     </Link>
 
                     <Link className="hamburger">
-                        <FaIcons.FaBars onClick={showMenubar}/>
+                        <FaIcons.FaBars onClick={toggleMenubar}/>
                     </Link>
 
                     <nav className={menubar ? 'navmenu active' : 'navmenu'}>
                         <ul className="nav-ul">
-                            <li className="menu-toggle" onClick={showMenubar}>
-                                <a className='close'>
+                            <li className="menu-toggle" onClick={toggleMenubar}>
+                                <p className='close'>
                                     <IoIcons.IoClose />
-                                </a>
+                                </p>
                                 
                             </li>
                             {NavItems.map((item, index) => {
                                 return (
                                     <li key={index} className={item.class}>
-                                        <Link to={item.path}>
+                                        <Link to={item.path} onClick={toggleMenubar}>
                                             {item.icon} <span>{item.title}</span>
                                         </Link>
                                     </li>

@@ -3,7 +3,18 @@ $background-color: #191a1a;
 $primary-color: #8fb2bf;
 $secondary-color: #fff;
 $accent-color: #193b59;
+$bg-hover-color: rgba(0, 0, 0, 0.85);
+$heart-color: #a70b0b;
 
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 $siteFont: 'Montserrat', sans-serif;
+$header-weight: 700;
+
+//other
+
+$max-body-width: 900px;
+
+//media query breakpoints
+$breakpoint-tablet: 770px;
+$breakpoint-desktop: 900px;

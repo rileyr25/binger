@@ -1,64 +1,138 @@
 header {
     .navbar {
-        height: 6rem;
+        height: 3rem;
         background: $background-color;
         padding: 1rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-top: 5px;
+        
 
         .logo {
-            width: 4rem;
+            font-family: $siteFont;
+            font-weight: $header-weight;
+            font-size: 1.25rem;
+            width: 2rem;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            p{
+                padding-left: 0.5rem;
+                color: $primary-color;
+            }
         }
 
         .hamburger {
             color: $primary-color;
-            font-size: 2.5rem;
+            font-size: 2rem;
+            height: 32px;
         }
 
         .navmenu {
             background: $background-color;
             width: 65vw;
             max-width: 330px;
-            padding: 1rem;
+            padding: .25rem 1rem;
             height: 100vh;
             position: fixed;
             top: 0;
             right: -100%;
             transition: 700ms;
+            z-index: 100;
 
+            box-shadow: -12px 0px 15px 0px rgba(0,0,0,0.3);
             .nav-ul {
                 list-style: none;
                 margin: 0;
                 padding: 0;
-                a {
+                a,p {
                     text-decoration: none;
                     color: $primary-color;
-                    font-size: 1.5rem;
+                    font-size: 1.3rem;
                     font-family: $siteFont;
                     font-weight: 700;
                     display: flex;
                     align-items: center;
                     justify-content: flex-end;
-
+                    transition: 200ms;
+                    &:hover {
+                        color: $secondary-color;
+                        transition: 200ms;
+                    }
                     span {
                         padding-left: 0.5rem;
                     }
                 }
-                li {
-                    padding-bottom: 2rem;
+
+                .menu-toggle {
+                    padding-top: 5px;
+                    padding-bottom: 1rem;
+                }
+                .nav-item-li {
+                    padding-bottom: 1rem;
+                    padding-right: 0.5rem;
                 }
             }
 
-            a.close {
-                font-size: 3.5rem;
+            p.close {
+                font-size: 2.5rem;
+                margin: 0;
                 padding: 0;
+                &:hover  {
+                    cursor: pointer;
+                    color: $primary-color;
+                }
             }
         }
 
         .navmenu.active {
             right: 0;
             transition: 300ms;
+        }
+    }
+}
+@media (min-width: $breakpoint-tablet) {
+    .hamburger {
+        display: none;
+    }
+
+
+
+    header {
+        padding: 1rem 0;
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+
+            .logo {
+                width: 3rem;
+                font-size: 2rem;
+            }
+    }
+    }
+
+    
+    header .navbar .navmenu {
+        position: relative;
+        height: auto;
+        right: auto;
+        left: auto;
+        width: auto;
+        box-shadow: none;
+        max-width: none;
+        transition: none;
+        .nav-ul {
+            display: flex;
+            .menu-toggle {
+                display: none;
+            }
+            svg {
+                display: none;
+            }
+            .nav-item-li {
+                padding: 1rem;
+            }
         }
     }
 }

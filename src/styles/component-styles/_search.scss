@@ -1,0 +1,15 @@
+.search-bar {
+    display: flex;
+    font-family: $siteFont;
+    font-weight: 500;
+    margin: 1rem auto 2rem auto;
+    width: 75%;
+    max-width: 500px;
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 20px;
+
+    &:focus {
+        outline: none;
+    }
+}

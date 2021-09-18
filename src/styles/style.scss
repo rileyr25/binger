@@ -1,1 +1,26 @@
-@import 'variables', 'mixins', 'component-styles/nav';
+@import 
+'variables', 
+'mixins',
+'main', 
+'component-styles/nav', 
+'component-styles/movies', 
+'component-styles/single', 
+'component-styles/home', 
+'component-styles/search',
+'component-styles/carousel',
+'component-styles/about',
+'component-styles/favourites',
+'component-styles/404page';
+
+
+body {
+    background-color: $background-color;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $siteFont;
+    color: $primary-color;
+}

@@ -1,0 +1,18 @@
+.fav-page {
+    h1 {
+        padding: 0 1rem;
+    }
+
+    .no-favs {
+        padding: 0 1rem;
+        text-align: center;
+        font-family: $siteFont;
+        p {
+            color: white;
+        }
+        .find-movie {
+            color: $primary-color;
+            font-size: 1.2rem;
+        }
+    }
+}

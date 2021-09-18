@@ -1,0 +1,110 @@
+.single-movie {
+    padding-top: 1rem;
+    max-width: $max-body-width;
+    color: white;
+    font-family: $siteFont;
+    margin: auto;
+    
+    .single-title {
+        font-weight: 600;
+        margin: 0;
+        padding: 0.5rem 1rem;
+        font-size: 1.5rem;
+        color: $primary-color;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+        padding: 0 1rem;
+        color: $primary-color;
+    }
+
+    .description {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    @media(min-width: $breakpoint-tablet) {
+        .mobile-overview {
+            display: none;
+        }
+    }
+
+    .single-display {
+        display: flex;
+        background-color: #1f1f1f;
+
+        .movie-poster {
+            flex: 1;
+            min-width: 150px;
+            width: 30%;
+            max-width: 300px;
+            padding: 0.5rem;
+        }
+
+        .movie-details {
+            position: relative;
+            flex: 1;
+            .single-ratings {
+                font-size: 0.9rem;
+                margin: 0;
+                padding: 0.5rem 0;
+                .movie-rating {
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    svg {
+                        color: #e7d747;
+                        font-size: 0.9rem;
+                        margin-left: 0.25rem;
+                    }
+                }
+            }
+
+            .single-release {
+                font-weight: 700;
+                font-size: 1.5rem;
+                margin: 0;
+            }
+            .widescreen-overview {
+                display: none;
+            }
+
+            .cardbtn {
+                color: white;
+                position: absolute;
+                bottom: 1rem;
+                border: none;
+                border-radius: 50px;
+                padding: 1rem;
+                background: $accent-color;
+            }
+            .fav-btn {
+                &:hover{
+                            svg {
+                            color: $heart-color;
+                            transition: 0.5s;
+                        }
+                    }
+            }
+            .remove-btn {
+                svg {
+                    color: $heart-color;
+                }
+            }
+
+            @media(min-width: $breakpoint-tablet) {
+                .widescreen-overview {
+                    display: block;
+                    p {
+                        padding: 0;
+                        margin: 0;
+                    }
+                    h2 {
+                        padding: 0.5rem 0;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
