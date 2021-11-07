@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <GlobalProvider>
-        <Router>
+        <Router basename="binger">
           <Nav />
           <Switch>
             <Route path='/' exact component={Home}/>

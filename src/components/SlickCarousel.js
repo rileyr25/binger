@@ -11,7 +11,7 @@ https://api.themoviedb.org/3/movie/now_playing?api_key=77aaca50c36a99915c39b41a3
     useEffect(() => {
         const fetchFeatured = async () => {
 
-            const response = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=77aaca50c36a99915c39b41a386a0424&language=en-US&page=1`);
+            const response = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=77aaca50c36a99915c39b41a386a0424&language=en-US&page=1`);
             
             let responseData = await response.json();
             responseData = responseData.results.splice(0, 5)

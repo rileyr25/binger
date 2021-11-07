@@ -21,7 +21,7 @@
         width: 100%;
         max-height: 250px;
         object-fit: cover;
-        opacity: 0.3;
+        opacity: 0.2;
         z-index: -1;
 
     }
@@ -71,11 +71,11 @@
             @media (min-width: 355px) {
                 .slide-overview {
                     top:35%;
-                    font-size: 1rem;
+                    font-size: 0.9rem;
                 }
-                .slide-title {
-                    font-size: 1.5rem;
-                }
+                // .slide-title {
+                //     font-size: 1.5rem;
+                // }
 
                 .slide-overview.sm {
                     display: none;
@@ -95,7 +95,7 @@
                 }
 
                 .slide-title {
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                 }
 
                 .slide-overview.sm {

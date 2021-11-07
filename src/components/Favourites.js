@@ -19,7 +19,7 @@ function Favourites({  }) {
         </div>: 
         <section className="no-favs">
             <h2>No Favourites</h2>
-            <p>You have movies in your favourites list!</p>
+            <p>You have no movies in your favourites list!</p>
             <Link to="/search" className="find-movie"><GoIcons.GoSearch/> Find a Movie</Link>
         </section>
         }

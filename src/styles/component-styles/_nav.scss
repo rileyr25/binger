@@ -49,7 +49,7 @@ header {
                 a,p {
                     text-decoration: none;
                     color: $primary-color;
-                    font-size: 1.3rem;
+                    font-size: 1.75rem;
                     font-family: $siteFont;
                     font-weight: 700;
                     display: flex;
@@ -70,8 +70,7 @@ header {
                     padding-bottom: 1rem;
                 }
                 .nav-item-li {
-                    padding-bottom: 1rem;
-                    padding-right: 0.5rem;
+                    padding: 2rem 0.5rem 1.75rem 0;
                 }
             }
 
@@ -124,6 +123,7 @@ header {
         transition: none;
         .nav-ul {
             display: flex;
+            
             .menu-toggle {
                 display: none;
             }
@@ -132,6 +132,11 @@ header {
             }
             .nav-item-li {
                 padding: 1rem;
+                
+            }
+
+            a,p {
+                font-size: 1.2rem;
             }
         }
     }
